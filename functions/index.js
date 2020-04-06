@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 app.get('/',(request,response)=>{
     response.set('Cache-Control','public, max-age=300, s-maxage=600');
     getFacts().then(facts=>{
-        response.json(facts);
+        response.json([facts]);
     })
 })
 
